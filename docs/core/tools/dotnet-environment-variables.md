@@ -181,7 +181,9 @@ See [EventPipe environment variables](../diagnostics/eventpipe.md#trace-using-en
 
 ### `DOTNET_ROOT`, `DOTNET_ROOT(x86)`
 
-Specifies the location of the .NET runtimes, if they are not installed in the default location. The default location on Windows is `C:\Program Files\dotnet`. The default location on Linux and macOS is `/usr/local/share/dotnet`. This environment variable is used only when running apps via generated executables (apphosts). `DOTNET_ROOT(x86)` is used instead when running a 32-bit executable on a 64-bit OS.
+Specifies the location of the .NET runtimes, if they are not installed in the default location. The default location on Windows is `C:\Program Files\dotnet`. The default location on macOS is `/usr/local/share/dotnet`. The default location on Linux varies depending on distro and installment method. The default location on Ubuntu with the official installer is `/usr/share/dotnet`. Run the command `locate host/fxr` to find the dotnet directory that contains the .NET runtimes. 
+
+This environment variable is used only when running apps via generated executables (apphosts). `DOTNET_ROOT(x86)` is used instead when running a 32-bit executable on a 64-bit OS.
 
 ### `NUGET_PACKAGES`
 
